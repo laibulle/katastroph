@@ -1,178 +1,76 @@
 # Kata Catalog
 
 Each kata has the same workflow: read `exercise.md` in the matching folder under
-`src/katastrof/katas/`, implement `__init__.py`, run the test, then compare with
-the matching folder under `src/katastrof/solutions/`.
+`src/katastrof/katas/`, implement `__init__.py`, run the test, then compare with the
+matching folder under `src/katastrof/solutions/`.
+
+This curriculum stays non-AI for now. It targets the general algorithm interview skills
+you need before an AI-integration role gets into product architecture, LLM workflows, or
+model APIs.
+
+## Track 1: Core Python Algorithms
+
+These kata build the foundations: Python syntax, standard collections, recursion,
+strings, integers, and basic data structures.
+
+| Kata | Pattern | Target Complexity |
+| --- | --- | --- |
+| `tail` | streaming, deque | `O(n)` time, `O(k)` space |
+| `palindromes` | counting, `Counter` | `O(n)` time |
+| `longest_distinct_substring` | sliding window | `O(n)` time |
+| `common_sorted` | multiset / two lists | `O(n + m)` time |
+| `move_dots` | stable compaction | `O(n)` time |
+| `recursion` | recursive base case | `O(n)` time |
+| `fibonacci` | iterative/reduce state | `O(n)` time, `O(1)` space |
+| `gcd` | Euclid recursion | `O(log min(a, b))` |
+| `primes` | divisibility, sieve | `O(sqrt(n))`, sieve about `O(n log log n)` |
+| `string_analysis` | normalization, `Counter` | `O(n + m)` time |
+| `parentheses` | stack | `O(n)` time |
+| `binary_search` | halve search space | `O(log n)` time |
+| `tree` | DFS/BFS | `O(n)` time |
+| `two_sum` | hash set lookup | `O(n)` average time |
+
+## Track 2: SFEIR-Style Exercises
+
+These map closely to the exercises from the interview guidance you shared.
+
+| Kata | Pattern | Target Complexity |
+| --- | --- | --- |
+| `graph_serialization` | graph traversal with cycles | `O(V + E)` |
+| `salut_toto` | thread coordination | `O(n)` output |
+| `balanced_partition` | dynamic programming | `O(n * S)` pseudo-polynomial |
+| `sorted_matrix` | heap / k-way merge | `O(N log r)` |
+
+## Track 3: Senior Interview Patterns
+
+These are the next layer for senior readiness. They are still general algorithms, but
+they show up constantly in integration-heavy systems: schedulers, queues, caches,
+dependency graphs, parsers, and ranking.
+
+| Kata | Pattern | Target Complexity |
+| --- | --- | --- |
+| `merge_intervals` | intervals + sorting | `O(n log n)` |
+| `meeting_rooms` | sweep line | `O(n log n)` |
+| `graph_shortest_path` | BFS shortest path | `O(V + E)` |
+| `topological_sort` | dependency ordering | `O(V + E)` |
+| `trie` | prefix tree | `O(L)` per operation |
+| `lru_cache` | cache eviction | `O(1)` average operations |
+| `max_sum_subarray` | fixed sliding window / prefix sums | `O(n)` |
+| `subsets` | backtracking / powerset | `O(n * 2^n)` output |
+| `expression_evaluator` | parsing + stack | `O(n)` |
+| `top_k_frequent` | counting + ranking | `O(n + u log u)` |
+
+## Suggested Order
+
+1. Start with `string_analysis`, `two_sum`, `parentheses`, `binary_search`.
+2. Move to `longest_distinct_substring`, `tail`, `tree`, `primes`.
+3. Do SFEIR-style kata: `graph_serialization`, `sorted_matrix`, `balanced_partition`.
+4. Finish with senior patterns: `merge_intervals`, `meeting_rooms`,
+   `graph_shortest_path`, `topological_sort`, `lru_cache`, `expression_evaluator`.
+
+For every kata, force yourself to answer three questions before reading the solution:
+
+- What is `n`?
+- How many times can one input item be touched?
+- What extra data structure grows with the input?
 
-## SFEIR-Style Interview Exercises
-
-### 1. Tail
-
-Implement `tail_lines(text, count)`.
-
-Folder: `src/katastrof/katas/tail/`
-
-Return the last `count` lines of a text stream. The reference answer uses a fixed-size
-`deque`, so memory is `O(count)` instead of `O(total_lines)`.
-
-Complexity: `O(n)` time, `O(k)` space.
-
-### 2. Serialization
-
-Implement `serialize_graph(root)`.
-
-Folder: `src/katastrof/katas/graph_serialization/`
-
-Serialize a graph of object-like dictionaries, including cycles. Store each node once
-and represent edges by ids.
-
-Complexity: `O(V + E)` time, `O(V)` space.
-
-### 3. Tableau de Palindromes
-
-Implement `make_palindromes(words)`.
-
-Folder: `src/katastrof/katas/palindromes/`
-
-For each string, return one palindrome permutation or `None`. A palindrome permutation
-is possible when at most one character has an odd count.
-
-Complexity: `O(total_chars)` time, `O(alphabet)` space per word.
-
-### 4. Caracteres Distincts
-
-Implement `longest_distinct_substring(text)`.
-
-Folder: `src/katastrof/katas/longest_distinct_substring/`
-
-Use a sliding window and a map of last-seen positions.
-
-Complexity: `O(n)` time, `O(alphabet)` space.
-
-### 5. En Commun
-
-Implement `common_sorted(left, right)`.
-
-Folder: `src/katastrof/katas/common_sorted/`
-
-Find common characters from two sorted lists, preserving duplicates. Use two pointers.
-
-Complexity: `O(n + m)` time, `O(result)` space.
-
-### 6. Salut Toto
-
-Implement `alternating_salut_toto(repetitions)`.
-
-Folder: `src/katastrof/katas/salut_toto/`
-
-Use two threads coordinated by a condition variable.
-
-Complexity: `O(n)` time, `O(n)` output space.
-
-### 7. Equilibrage
-
-Implement `balanced_partition(numbers)`.
-
-Folder: `src/katastrof/katas/balanced_partition/`
-
-Split a list into two groups with minimum sum difference. This is the partition problem;
-the exact reference answer uses dynamic programming over reachable sums.
-
-Complexity: pseudo-polynomial `O(n * sum(numbers))` time and space.
-
-### 8. Matrice Triee
-
-Implement `merge_sorted_matrix(matrix)`.
-
-Folder: `src/katastrof/katas/sorted_matrix/`
-
-Given a matrix where every row and column is sorted, return all elements in sorted
-order. The reference answer performs a k-way merge of sorted rows using a heap.
-
-Complexity: `O(N log rows)` time, `O(rows)` space.
-
-### 9. Tassement
-
-Implement `move_dots_to_end(items)`.
-
-Folder: `src/katastrof/katas/move_dots/`
-
-Move `"."` values to the end while preserving the relative order of other values.
-
-Complexity: `O(n)` time, `O(n)` space.
-
-## Core Algorithm Drills
-
-### 10. Recursion
-
-Implement `factorial_recursive(n)`.
-
-Folder: `src/katastrof/katas/recursion/`
-
-Use recursion for the interview explanation, but remember that Python does not optimize
-tail recursion.
-
-### 11. Iteration
-
-Implement `fibonacci_iterative(n)`.
-
-Folder: `src/katastrof/katas/fibonacci/`
-
-This is the Pythonic version for production-sized inputs.
-
-### 12. Integers
-
-Implement `gcd(a, b)` with Euclid's algorithm.
-
-Folder: `src/katastrof/katas/gcd/`
-
-Complexity: `O(log min(a, b))`.
-
-### 13. Prime Numbers
-
-Implement `is_prime(n)` and `primes_up_to(limit)`.
-
-Folder: `src/katastrof/katas/primes/`
-
-Use trial division up to `sqrt(n)` for primality and a sieve for many primes.
-
-### 14. String Analysis
-
-Implement `char_frequencies(text)` and `is_anagram(left, right)`.
-
-Folder: `src/katastrof/katas/string_analysis/`
-
-Use `collections.Counter`, Python's standard multiset.
-
-### 15. Stack
-
-Implement `valid_parentheses(text)`.
-
-Folder: `src/katastrof/katas/parentheses/`
-
-Use a list as a stack.
-
-### 16. Binary Search
-
-Implement `binary_search(sorted_items, target)`.
-
-Folder: `src/katastrof/katas/binary_search/`
-
-The key invariant is that the answer, if present, remains inside `[low, high]`.
-
-### 17. Trees
-
-Implement `TreeNode`, `tree_height(node)`, `inorder_values(node)`, and
-`breadth_first_values(root)`.
-
-Folder: `src/katastrof/katas/tree/`
-
-Depth-first traversal is naturally recursive; breadth-first traversal uses a queue.
-
-### 18. Hash Set
-
-Implement `two_sum(numbers, target)`.
-
-Folder: `src/katastrof/katas/two_sum/`
-
-Use a set of previously seen values to find a complement in one pass.

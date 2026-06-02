@@ -9,5 +9,16 @@ left-node-right order.
 Breadth-first traversal uses a `collections.deque` as a queue and a helper that returns
 the existing children for each node.
 
+Schema:
+
+```text
+      4
+    /   \
+   2     6
+
+inorder:  left, node, right -> 2, 4, 6
+BFS:      level by level    -> 4, 2, 6
+```
+
 Complexity: each traversal is `O(n)` time. Recursive DFS uses `O(h)` call stack space;
 BFS uses `O(w)` queue space.

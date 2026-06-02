@@ -7,4 +7,14 @@ Opening brackets are pushed onto the stack. Closing brackets must match the late
 opening bracket, or the reducer returns `None` to represent an invalid state. At the
 end, the stack must be empty.
 
+Schema:
+
+```text
+text:  ( [ ] )
+stack: (      push
+stack: ( [    push
+stack: (      pop matching ]
+stack: empty  pop matching )
+```
+
 Complexity: `O(n)` time and `O(n)` space.

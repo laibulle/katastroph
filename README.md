@@ -50,6 +50,8 @@ implemented every module.
 6. Read `docs/complexity_guide.md`.
 7. Explain out loud the complexity and tradeoffs.
 
+For sequencing, use `docs/study_plan.md`.
+
 ## Reference Solution Style
 
 The reference answers lean toward an Elixir-friendly Python style: small named

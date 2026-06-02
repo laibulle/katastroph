@@ -7,4 +7,16 @@ Small helpers name the important transformations: extracting ids, reading childr
 serializing one node. The dictionary is both the output store and the visited set. This
 prevents infinite loops when cycles exist and ensures each node is serialized once.
 
+Schema:
+
+```text
+A -> B
+^    |
+|____|
+
+serialized nodes:
+A: children=[B]
+B: children=[A]
+```
+
 Complexity: `O(V + E)` time and `O(V)` space.
