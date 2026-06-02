@@ -9,9 +9,7 @@ def fibonacci_iterative(n: int) -> int:
     i_2 = 0
 
     while i <= n:
-        t_1 = i_1 + i_2
-        i_1 = i_2
-        i_2 = t_1
+        i_1, i_2 = i_2, i_1 + i_2
         i+=1
 
     return i_2 + i_1
