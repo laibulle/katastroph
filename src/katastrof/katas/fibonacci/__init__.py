@@ -4,9 +4,7 @@ def fibonacci_iterative(n: int) -> int:
     elif n == 1:
         return 1
 
-    i = 2
-    i_1 = 1
-    i_2 = 0
+    i, i_1, i_2 = 2, 1, 0
 
     while i <= n:
         i_1, i_2 = i_2, i_1 + i_2
