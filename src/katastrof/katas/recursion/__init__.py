@@ -1,2 +1,11 @@
 def factorial_recursive(n: int) -> int:
-    raise NotImplementedError
+    if n == 0:
+        return 1
+
+    return _factorial_recursive(n-1, n)
+
+def _factorial_recursive(n: int, value: int) -> int:
+    if n == 0:
+        return value
+    else:
+        return _factorial_recursive(n - 1, value * n)
