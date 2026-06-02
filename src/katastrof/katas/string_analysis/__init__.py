@@ -6,4 +6,4 @@ def char_frequencies(text: str) -> dict[str, int]:
 
 
 def is_anagram(left: str, right: str) -> bool:
-    raise NotImplementedError
+    return char_frequencies(left.replace(" ", "").lower()) == char_frequencies(right.replace(" ", "").lower())
