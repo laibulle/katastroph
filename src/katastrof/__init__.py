@@ -1,0 +1,2 @@
+"""Algorithm kata package."""
+

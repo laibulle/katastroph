@@ -1,0 +1,15 @@
+[project]
+name = "katastrof"
+version = "0.1.0"
+description = "Python algorithm kata for interview preparation."
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"
+
