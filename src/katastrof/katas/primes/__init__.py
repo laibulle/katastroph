@@ -4,4 +4,3 @@ def is_prime(n: int) -> bool:
 
 def primes_up_to(limit: int) -> list[int]:
     raise NotImplementedError
-

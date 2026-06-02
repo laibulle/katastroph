@@ -7,4 +7,3 @@ class Trie:
 
     def starts_with(self, prefix: str) -> bool:
         raise NotImplementedError
-

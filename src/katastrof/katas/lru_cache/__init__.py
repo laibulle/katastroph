@@ -7,4 +7,3 @@ class LRUCache:
 
     def put(self, key: str, value: int) -> None:
         raise NotImplementedError
-

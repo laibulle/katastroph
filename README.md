@@ -52,6 +52,17 @@ implemented every module.
 
 For sequencing, use `docs/study_plan.md`.
 
+## Reset Progress
+
+To reset all practice implementations back to stubs and clear the checkboxes in
+`docs/study_plan.md`:
+
+```bash
+make reset-progress
+```
+
+This does not touch `src/katastrof/solutions/`.
+
 ## Reference Solution Style
 
 The reference answers lean toward an Elixir-friendly Python style: small named
