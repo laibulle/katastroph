@@ -27,7 +27,7 @@ Big-O explanations.
 
 ## Week 2: Interview Patterns
 
-- [ ] `longest_distinct_substring`
+- [x] `longest_distinct_substring`
 - [ ] `tail`
 - [ ] `common_sorted`
 - [ ] `move_dots`
