@@ -1,9 +1,18 @@
 def binary_search(sorted_items: list[int], target: int) -> int:
-    for idx, item in enumerate(sorted_items):
-        print(idx, item)
-        if item == target:
-            return idx
-        elif target < item:
-            return -1
+    low = 0
+    high = len(sorted_items) - 1
+
+    while low <= high:
+        mid = (low + high) // 2
+        value = sorted_items[mid]
+
+        if value == target:
+            return mid
+        elif value < target:
+            low = mid + 1
+            high = high
+        elif value > target:
+            high = mid - 1
+            low = low
 
     return -1
