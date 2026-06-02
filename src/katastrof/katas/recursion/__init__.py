@@ -7,5 +7,5 @@ def factorial_recursive(n: int) -> int:
 def _factorial_recursive(n: int, value: int) -> int:
     if n == 0:
         return value
-    else:
-        return _factorial_recursive(n - 1, value * n)
+
+    return _factorial_recursive(n - 1, value * n)
