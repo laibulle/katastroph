@@ -2,12 +2,12 @@ from collections import deque
 from io import StringIO
 
 
+def _lines_without_newlines(text: str):
+    return (line.removesuffix("\n") for line in StringIO(text))
+
+
 def tail_lines(text: str, count: int) -> list[str]:
     """Return the last `count` lines of text."""
     if count <= 0:
         return []
-    last: deque[str] = deque(maxlen=count)
-    for line in StringIO(text):
-        last.append(line.removesuffix("\n"))
-    return list(last)
-
+    return list(deque(_lines_without_newlines(text), maxlen=count))

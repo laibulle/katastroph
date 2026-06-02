@@ -12,5 +12,9 @@ Return a structure with:
 
 Edges should be represented by child ids, not by nested objects.
 
-Aim for `O(V + E)` time and `O(V)` space.
+## Complexity Learning Goal
 
+Let `V` be the number of nodes and `E` be the number of child links.
+
+Aim for `O(V + E)` time: each node and edge should be handled once. Aim for `O(V)`
+space for the serialized nodes and the visited set.

@@ -11,16 +11,20 @@ class TreeNode:
     right: TreeNode | None = None
 
 
+def _children(node: TreeNode) -> list[TreeNode]:
+    return [child for child in (node.left, node.right) if child is not None]
+
+
 def tree_height(node: TreeNode | None) -> int:
-    if node is None:
-        return 0
-    return 1 + max(tree_height(node.left), tree_height(node.right))
+    return 0 if node is None else 1 + max(map(tree_height, (node.left, node.right)))
 
 
 def inorder_values(node: TreeNode | None) -> list[int]:
-    if node is None:
-        return []
-    return inorder_values(node.left) + [node.value] + inorder_values(node.right)
+    return [] if node is None else [
+        *inorder_values(node.left),
+        node.value,
+        *inorder_values(node.right),
+    ]
 
 
 def breadth_first_values(root: TreeNode | None) -> list[int]:
@@ -31,9 +35,5 @@ def breadth_first_values(root: TreeNode | None) -> list[int]:
     while queue:
         node = queue.popleft()
         values.append(node.value)
-        if node.left:
-            queue.append(node.left)
-        if node.right:
-            queue.append(node.right)
+        queue.extend(_children(node))
     return values
-

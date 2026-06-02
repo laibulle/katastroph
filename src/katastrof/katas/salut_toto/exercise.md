@@ -11,3 +11,9 @@ Example:
 alternating_salut_toto(3) == "Salut Toto Salut Toto Salut Toto"
 ```
 
+## Complexity Learning Goal
+
+Let `n` be `repetitions`.
+
+The output contains `2n` words, so the time and output space are both `O(n)`. The
+interesting part is correctness of coordination, not asymptotic speed.

@@ -1,6 +1,10 @@
 from math import isqrt
 
 
+def _odd_divisors_up_to(limit: int):
+    return range(3, isqrt(limit) + 1, 2)
+
+
 def is_prime(n: int) -> bool:
     if n < 2:
         return False
@@ -8,10 +12,7 @@ def is_prime(n: int) -> bool:
         return True
     if n % 2 == 0:
         return False
-    for divisor in range(3, isqrt(n) + 1, 2):
-        if n % divisor == 0:
-            return False
-    return True
+    return all(n % divisor != 0 for divisor in _odd_divisors_up_to(n))
 
 
 def primes_up_to(limit: int) -> list[int]:
@@ -23,5 +24,8 @@ def primes_up_to(limit: int) -> list[int]:
         if sieve[candidate]:
             start = candidate * candidate
             sieve[start : limit + 1 : candidate] = b"\x00" * (((limit - start) // candidate) + 1)
-    return [number for number, prime in enumerate(sieve) if prime]
-
+    return [
+        number
+        for number, prime in enumerate(sieve)
+        if prime
+    ]

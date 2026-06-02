@@ -11,3 +11,9 @@ binary_search([1, 3, 5, 7], 5) == 2
 binary_search([1, 3, 5, 7], 2) == -1
 ```
 
+## Complexity Learning Goal
+
+Let `n` be the list length.
+
+Binary search is `O(log n)` because each comparison cuts the remaining search interval
+roughly in half.

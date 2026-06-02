@@ -11,3 +11,9 @@ fibonacci_iterative(1) == 1
 
 Raise `ValueError` for negative inputs. Prefer iteration over recursion.
 
+## Complexity Learning Goal
+
+Let `n` be the requested index.
+
+The target solution is `O(n)` time and `O(1)` space. Naive recursion is much worse
+because it recomputes the same Fibonacci values many times.

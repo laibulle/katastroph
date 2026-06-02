@@ -12,3 +12,9 @@ valid_parentheses("([]{})") is True
 valid_parentheses("([)]") is False
 ```
 
+## Complexity Learning Goal
+
+Let `n` be the string length.
+
+The stack solution is `O(n)` time because each character is read once. Space is `O(n)`
+in the worst case, for example `"((((("`.

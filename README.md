@@ -47,7 +47,16 @@ implemented every module.
 3. Implement the matching `__init__.py` in `src/katastrof/katas/`.
 4. Run the tests for fast feedback.
 5. Compare with the matching solution folder, including `explanation.md`.
-6. Explain out loud the complexity and tradeoffs.
+6. Read `docs/complexity_guide.md`.
+7. Explain out loud the complexity and tradeoffs.
+
+## Reference Solution Style
+
+The reference answers lean toward an Elixir-friendly Python style: small named
+functions, comprehensions, generators, `Counter`, `all`, `reduce`, and recursive helpers
+where they make the idea clearer. They still keep explicit loops for algorithms where
+Python reads better that way, such as heap merging, graph traversal, thread
+coordination, and early-exit searches.
 
 ## Elixir to Python Pointers
 

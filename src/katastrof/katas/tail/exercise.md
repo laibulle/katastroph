@@ -13,5 +13,9 @@ tail_lines("a\nb", 5) == ["a", "b"]
 tail_lines("a\nb", 0) == []
 ```
 
-Aim for `O(n)` time and `O(count)` space.
+## Complexity Learning Goal
 
+Let `n` be the number of lines and `k` be `count`.
+
+Aim for `O(n)` time because every line may need to be read once. Aim for `O(k)` space,
+not `O(n)`, because keeping all lines is unnecessary.

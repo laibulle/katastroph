@@ -12,3 +12,9 @@ left, right = balanced_partition([3, 1, 4, 2, 2])
 abs(sum(left) - sum(right)) == 0
 ```
 
+## Complexity Learning Goal
+
+Let `n` be the number of values and `S` be their total sum.
+
+An exact solution is usually pseudo-polynomial: `O(n * S)`. That means it depends on
+the numeric values, not only on how many values there are.
