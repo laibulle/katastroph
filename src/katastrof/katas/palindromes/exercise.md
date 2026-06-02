@@ -25,3 +25,27 @@ output. The important interview point is that you do not try every permutation.
 ```bash
 KATA_PACKAGE=katastrof.katas uv run pytest tests/test_palindromes.py
 ```
+
+## LLM Review Prompt
+
+Use this prompt after you have implemented the kata:
+
+```text
+You are reviewing my Python solution for the `palindromes` kata.
+
+Context:
+- Exercise: `src/katastrof/katas/palindromes/exercise.md`
+- My solution: `src/katastrof/katas/palindromes/__init__.py`
+- Tests: `tests/test_palindromes.py`
+- Ideal reference solution written for this kata: `src/katastrof/solutions/palindromes/__init__.py`
+- Ideal explanation: `src/katastrof/solutions/palindromes/explanation.md`
+
+Please evaluate my solution on:
+1. Correctness against the tests and edge cases.
+2. Time and space complexity, using the variables from the exercise.
+3. Python idiom and readability.
+4. Whether my approach is reasonably close to the ideal solution, or if it is different but still valid.
+5. The smallest concrete improvement I should make next.
+
+Do not just paste the ideal solution. Explain the gap between my solution and the ideal solution.
+```

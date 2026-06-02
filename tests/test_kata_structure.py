@@ -48,6 +48,12 @@ def test_every_kata_has_a_folder_exercise_solution_and_explanation():
         exercise = (kata_dir / "exercise.md").read_text()
         assert "## Run the Test" in exercise
         assert f"KATA_PACKAGE=katastrof.katas uv run pytest tests/test_{kata_name}.py" in exercise
+        assert "## LLM Review Prompt" in exercise
+        assert f"`src/katastrof/katas/{kata_name}/__init__.py`" in exercise
+        assert f"`tests/test_{kata_name}.py`" in exercise
+        assert f"`src/katastrof/solutions/{kata_name}/__init__.py`" in exercise
+        assert f"`src/katastrof/solutions/{kata_name}/explanation.md`" in exercise
+        assert "Do not just paste the ideal solution." in exercise
 
 
 def test_curriculum_docs_exist():
