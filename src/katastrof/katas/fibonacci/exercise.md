@@ -17,3 +17,9 @@ Let `n` be the requested index.
 
 The target solution is `O(n)` time and `O(1)` space. Naive recursion is much worse
 because it recomputes the same Fibonacci values many times.
+
+## Run the Test
+
+```bash
+KATA_PACKAGE=katastrof.katas uv run pytest tests/test_fibonacci.py
+```

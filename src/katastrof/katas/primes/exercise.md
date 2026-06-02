@@ -23,3 +23,9 @@ For `is_prime(n)`, checking divisors up to `sqrt(n)` gives `O(sqrt(n))` time.
 
 For `primes_up_to(limit)`, the sieve is about `O(limit log log limit)`, which is much
 better than testing every number independently for large limits.
+
+## Run the Test
+
+```bash
+KATA_PACKAGE=katastrof.katas uv run pytest tests/test_primes.py
+```

@@ -17,3 +17,9 @@ Let `n` be the number of meetings.
 
 Sorting start and end times gives `O(n log n)` time. The sweep itself is `O(n)`.
 
+
+## Run the Test
+
+```bash
+KATA_PACKAGE=katastrof.katas uv run pytest tests/test_meeting_rooms.py
+```

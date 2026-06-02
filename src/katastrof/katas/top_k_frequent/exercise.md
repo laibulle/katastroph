@@ -16,3 +16,9 @@ Let `n` be the number of items and `u` the number of unique values.
 
 Counting is `O(n)`. Sorting unique values is `O(u log u)`.
 
+
+## Run the Test
+
+```bash
+KATA_PACKAGE=katastrof.katas uv run pytest tests/test_top_k_frequent.py
+```

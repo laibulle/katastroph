@@ -18,3 +18,9 @@ Let `n` be the number of nodes, `h` the tree height, and `w` the maximum width.
 
 Traversals are `O(n)` time because every node is visited once. Recursive depth-first
 search uses `O(h)` stack space. Breadth-first search uses `O(w)` queue space.
+
+## Run the Test
+
+```bash
+KATA_PACKAGE=katastrof.katas uv run pytest tests/test_tree.py
+```

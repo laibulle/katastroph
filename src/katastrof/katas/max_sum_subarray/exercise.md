@@ -17,3 +17,9 @@ Let `n` be the number of values.
 The sliding-window target is `O(n)` time: update the previous window sum instead of
 re-summing each window from scratch.
 
+
+## Run the Test
+
+```bash
+KATA_PACKAGE=katastrof.katas uv run pytest tests/test_max_sum_subarray.py
+```

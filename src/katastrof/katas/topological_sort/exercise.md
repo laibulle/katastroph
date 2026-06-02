@@ -11,3 +11,9 @@ Let `V` be vertices and `E` be directed edges.
 
 Kahn's algorithm is `O(V + E)` time and `O(V)` space.
 
+
+## Run the Test
+
+```bash
+KATA_PACKAGE=katastrof.katas uv run pytest tests/test_topological_sort.py
+```

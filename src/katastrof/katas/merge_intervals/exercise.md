@@ -18,3 +18,9 @@ Let `n` be the number of intervals.
 Sorting dominates the solution: `O(n log n)` time. The merge scan is `O(n)`. Space is
 `O(n)` for the output.
 
+
+## Run the Test
+
+```bash
+KATA_PACKAGE=katastrof.katas uv run pytest tests/test_merge_intervals.py
+```

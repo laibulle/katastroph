@@ -16,3 +16,9 @@ Let `n` and `m` be the input lengths.
 
 Aim for work proportional to both inputs: `O(n + m)`. Avoid checking every item from
 the first list against every item from the second list, which would be `O(n * m)`.
+
+## Run the Test
+
+```bash
+KATA_PACKAGE=katastrof.katas uv run pytest tests/test_common_sorted.py
+```

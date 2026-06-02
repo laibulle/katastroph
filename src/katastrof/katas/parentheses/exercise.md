@@ -18,3 +18,9 @@ Let `n` be the string length.
 
 The stack solution is `O(n)` time because each character is read once. Space is `O(n)`
 in the worst case, for example `"((((("`.
+
+## Run the Test
+
+```bash
+KATA_PACKAGE=katastrof.katas uv run pytest tests/test_parentheses.py
+```

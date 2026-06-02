@@ -18,3 +18,9 @@ Let `n` be the number of values and `S` be their total sum.
 
 An exact solution is usually pseudo-polynomial: `O(n * S)`. That means it depends on
 the numeric values, not only on how many values there are.
+
+## Run the Test
+
+```bash
+KATA_PACKAGE=katastrof.katas uv run pytest tests/test_balanced_partition.py
+```

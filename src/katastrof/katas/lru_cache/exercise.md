@@ -16,3 +16,9 @@ Aim for `O(1)` average time for `get` and `put`.
 
 In Python, `collections.OrderedDict` is the simplest idiomatic way to learn the idea.
 
+
+## Run the Test
+
+```bash
+KATA_PACKAGE=katastrof.katas uv run pytest tests/test_lru_cache.py
+```

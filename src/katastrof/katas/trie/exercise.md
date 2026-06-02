@@ -17,3 +17,9 @@ Let `L` be the length of the word or prefix.
 Insert, exact lookup, and prefix lookup should be `O(L)`, independent of how many words
 are already stored.
 
+
+## Run the Test
+
+```bash
+KATA_PACKAGE=katastrof.katas uv run pytest tests/test_trie.py
+```

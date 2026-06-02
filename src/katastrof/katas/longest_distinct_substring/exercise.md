@@ -18,3 +18,9 @@ Let `n` be the string length.
 Aim for `O(n)` time. A tempting solution checks every substring, which becomes `O(n^2)`
 or worse. The intended solution moves a window across the string so each character is
 processed once.
+
+## Run the Test
+
+```bash
+KATA_PACKAGE=katastrof.katas uv run pytest tests/test_longest_distinct_substring.py
+```

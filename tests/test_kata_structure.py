@@ -45,6 +45,10 @@ def test_every_kata_has_a_folder_exercise_solution_and_explanation():
         assert (solution_dir / "__init__.py").exists()
         assert (solution_dir / "explanation.md").exists()
 
+        exercise = (kata_dir / "exercise.md").read_text()
+        assert "## Run the Test" in exercise
+        assert f"KATA_PACKAGE=katastrof.katas uv run pytest tests/test_{kata_name}.py" in exercise
+
 
 def test_curriculum_docs_exist():
     root = Path(__file__).parents[1]

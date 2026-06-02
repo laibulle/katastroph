@@ -18,3 +18,9 @@ Let `n` be the input number.
 
 The recursive solution performs one call per integer from `n` down to `1`, so time is
 `O(n)`. The call stack also grows to `O(n)`.
+
+## Run the Test
+
+```bash
+KATA_PACKAGE=katastrof.katas uv run pytest tests/test_recursion.py
+```

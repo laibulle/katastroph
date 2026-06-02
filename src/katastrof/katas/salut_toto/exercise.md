@@ -17,3 +17,9 @@ Let `n` be `repetitions`.
 
 The output contains `2n` words, so the time and output space are both `O(n)`. The
 interesting part is correctness of coordination, not asymptotic speed.
+
+## Run the Test
+
+```bash
+KATA_PACKAGE=katastrof.katas uv run pytest tests/test_salut_toto.py
+```

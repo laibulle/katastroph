@@ -17,3 +17,9 @@ Let `n` be the number of inputs.
 
 The set-based solution is `O(n)` average time and `O(n)` space. The brute-force nested
 loop solution is `O(n^2)`.
+
+## Run the Test
+
+```bash
+KATA_PACKAGE=katastrof.katas uv run pytest tests/test_two_sum.py
+```

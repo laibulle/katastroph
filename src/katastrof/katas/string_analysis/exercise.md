@@ -22,3 +22,9 @@ Let `n` and `m` be the two string lengths.
 
 Counting characters is linear: `O(n)` for one string, `O(n + m)` for comparing two
 strings. The extra space depends on the number of distinct characters.
+
+## Run the Test
+
+```bash
+KATA_PACKAGE=katastrof.katas uv run pytest tests/test_string_analysis.py
+```

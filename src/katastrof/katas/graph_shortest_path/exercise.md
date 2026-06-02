@@ -12,3 +12,9 @@ Let `V` be vertices and `E` be edges.
 Breadth-first search is `O(V + E)` time because it visits each reachable vertex and edge
 at most once. Space is `O(V)` for the queue and parent map.
 
+
+## Run the Test
+
+```bash
+KATA_PACKAGE=katastrof.katas uv run pytest tests/test_graph_shortest_path.py
+```

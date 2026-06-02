@@ -19,3 +19,9 @@ Let `N` be the total number of values and `r` be the number of rows.
 
 A heap-based merge should be `O(N log r)`: every value is popped once, and heap
 operations cost `log r`.
+
+## Run the Test
+
+```bash
+KATA_PACKAGE=katastrof.katas uv run pytest tests/test_sorted_matrix.py
+```

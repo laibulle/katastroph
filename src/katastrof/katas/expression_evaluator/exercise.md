@@ -17,3 +17,9 @@ Let `n` be the number of characters.
 
 A single-pass parser should be `O(n)` time. Space is `O(d)` for parenthesis depth.
 
+
+## Run the Test
+
+```bash
+KATA_PACKAGE=katastrof.katas uv run pytest tests/test_expression_evaluator.py
+```

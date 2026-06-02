@@ -19,3 +19,9 @@ Let `n` be the list length.
 
 Aim for `O(n)` time: inspect each item once. Space can be `O(n)` for a clear solution,
 or `O(1)` extra space for an in-place variant.
+
+## Run the Test
+
+```bash
+KATA_PACKAGE=katastrof.katas uv run pytest tests/test_move_dots.py
+```

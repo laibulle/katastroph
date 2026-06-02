@@ -17,3 +17,9 @@ Let `n` be the list length.
 
 Binary search is `O(log n)` because each comparison cuts the remaining search interval
 roughly in half.
+
+## Run the Test
+
+```bash
+KATA_PACKAGE=katastrof.katas uv run pytest tests/test_binary_search.py
+```

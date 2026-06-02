@@ -18,3 +18,9 @@ Let `V` be the number of nodes and `E` be the number of child links.
 
 Aim for `O(V + E)` time: each node and edge should be handled once. Aim for `O(V)`
 space for the serialized nodes and the visited set.
+
+## Run the Test
+
+```bash
+KATA_PACKAGE=katastrof.katas uv run pytest tests/test_graph_serialization.py
+```

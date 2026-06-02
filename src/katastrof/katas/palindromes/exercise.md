@@ -19,3 +19,9 @@ Let `n` be the total number of characters.
 
 Counting characters is `O(n)`. Building the answer is also linear in the characters you
 output. The important interview point is that you do not try every permutation.
+
+## Run the Test
+
+```bash
+KATA_PACKAGE=katastrof.katas uv run pytest tests/test_palindromes.py
+```
