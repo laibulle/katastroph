@@ -14,22 +14,26 @@ uv sync --extra dev
 uv run pytest
 ```
 
-By default, tests run against the reference implementation in
-`katastrof.solutions`.
+By default, tests run against the reference implementations in
+`src/katastrof/solutions/`.
 
-To practice, implement the functions in `src/katastrof/katas.py`, then run the
-same contract tests against your code:
+To practice, implement the matching module in `src/katastrof/katas/`, then run
+the same contract tests against your code:
 
 ```bash
-KATA_MODULE=katastrof.katas uv run pytest
+KATA_PACKAGE=katastrof.katas uv run pytest tests/test_tail.py
 ```
+
+Replace `tests/test_tail.py` with the test file for the kata you are solving.
+Running the whole suite against `katastrof.katas` is useful only after you have
+implemented every module.
 
 ## How to Train
 
 1. Read one prompt in `docs/kata_catalog.md`.
-2. Implement the matching function in `src/katastrof/katas.py`.
+2. Implement the matching module in `src/katastrof/katas/`.
 3. Run the tests for fast feedback.
-4. Compare with `src/katastrof/solutions.py`.
+4. Compare with the matching module in `src/katastrof/solutions/`.
 5. Explain out loud the complexity and tradeoffs.
 
 ## Elixir to Python Pointers
