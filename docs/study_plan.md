@@ -19,8 +19,8 @@ This plan assumes the first interview is general algorithms, not AI.
 - [x] `parentheses`
 - [x] `binary_search`
 - [x] `recursion`
-- [ ] `fibonacci`
-- [ ] `gcd`
+- [x] `fibonacci`
+- [x] `gcd`
 
 Goal: become comfortable with Python collections, function signatures, tests, and simple
 Big-O explanations.
