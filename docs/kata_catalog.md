@@ -1,8 +1,8 @@
 # Kata Catalog
 
-Each kata has the same workflow: solve the matching module in
-`src/katastrof/katas/`, run the tests, then compare with the reference module in
-`src/katastrof/solutions/`.
+Each kata has the same workflow: read `exercise.md` in the matching folder under
+`src/katastrof/katas/`, implement `__init__.py`, run the test, then compare with
+the matching folder under `src/katastrof/solutions/`.
 
 ## SFEIR-Style Interview Exercises
 
@@ -10,7 +10,7 @@ Each kata has the same workflow: solve the matching module in
 
 Implement `tail_lines(text, count)`.
 
-Module: `tail`
+Folder: `src/katastrof/katas/tail/`
 
 Return the last `count` lines of a text stream. The reference answer uses a fixed-size
 `deque`, so memory is `O(count)` instead of `O(total_lines)`.
@@ -21,7 +21,7 @@ Complexity: `O(n)` time, `O(k)` space.
 
 Implement `serialize_graph(root)`.
 
-Module: `graph_serialization`
+Folder: `src/katastrof/katas/graph_serialization/`
 
 Serialize a graph of object-like dictionaries, including cycles. Store each node once
 and represent edges by ids.
@@ -32,7 +32,7 @@ Complexity: `O(V + E)` time, `O(V)` space.
 
 Implement `make_palindromes(words)`.
 
-Module: `palindromes`
+Folder: `src/katastrof/katas/palindromes/`
 
 For each string, return one palindrome permutation or `None`. A palindrome permutation
 is possible when at most one character has an odd count.
@@ -43,7 +43,7 @@ Complexity: `O(total_chars)` time, `O(alphabet)` space per word.
 
 Implement `longest_distinct_substring(text)`.
 
-Module: `longest_distinct_substring`
+Folder: `src/katastrof/katas/longest_distinct_substring/`
 
 Use a sliding window and a map of last-seen positions.
 
@@ -53,7 +53,7 @@ Complexity: `O(n)` time, `O(alphabet)` space.
 
 Implement `common_sorted(left, right)`.
 
-Module: `common_sorted`
+Folder: `src/katastrof/katas/common_sorted/`
 
 Find common characters from two sorted lists, preserving duplicates. Use two pointers.
 
@@ -63,7 +63,7 @@ Complexity: `O(n + m)` time, `O(result)` space.
 
 Implement `alternating_salut_toto(repetitions)`.
 
-Module: `salut_toto`
+Folder: `src/katastrof/katas/salut_toto/`
 
 Use two threads coordinated by a condition variable.
 
@@ -73,7 +73,7 @@ Complexity: `O(n)` time, `O(n)` output space.
 
 Implement `balanced_partition(numbers)`.
 
-Module: `balanced_partition`
+Folder: `src/katastrof/katas/balanced_partition/`
 
 Split a list into two groups with minimum sum difference. This is the partition problem;
 the exact reference answer uses dynamic programming over reachable sums.
@@ -84,7 +84,7 @@ Complexity: pseudo-polynomial `O(n * sum(numbers))` time and space.
 
 Implement `merge_sorted_matrix(matrix)`.
 
-Module: `sorted_matrix`
+Folder: `src/katastrof/katas/sorted_matrix/`
 
 Given a matrix where every row and column is sorted, return all elements in sorted
 order. The reference answer performs a k-way merge of sorted rows using a heap.
@@ -95,7 +95,7 @@ Complexity: `O(N log rows)` time, `O(rows)` space.
 
 Implement `move_dots_to_end(items)`.
 
-Module: `move_dots`
+Folder: `src/katastrof/katas/move_dots/`
 
 Move `"."` values to the end while preserving the relative order of other values.
 
@@ -107,7 +107,7 @@ Complexity: `O(n)` time, `O(n)` space.
 
 Implement `factorial_recursive(n)`.
 
-Module: `recursion`
+Folder: `src/katastrof/katas/recursion/`
 
 Use recursion for the interview explanation, but remember that Python does not optimize
 tail recursion.
@@ -116,7 +116,7 @@ tail recursion.
 
 Implement `fibonacci_iterative(n)`.
 
-Module: `fibonacci`
+Folder: `src/katastrof/katas/fibonacci/`
 
 This is the Pythonic version for production-sized inputs.
 
@@ -124,7 +124,7 @@ This is the Pythonic version for production-sized inputs.
 
 Implement `gcd(a, b)` with Euclid's algorithm.
 
-Module: `gcd`
+Folder: `src/katastrof/katas/gcd/`
 
 Complexity: `O(log min(a, b))`.
 
@@ -132,7 +132,7 @@ Complexity: `O(log min(a, b))`.
 
 Implement `is_prime(n)` and `primes_up_to(limit)`.
 
-Module: `primes`
+Folder: `src/katastrof/katas/primes/`
 
 Use trial division up to `sqrt(n)` for primality and a sieve for many primes.
 
@@ -140,7 +140,7 @@ Use trial division up to `sqrt(n)` for primality and a sieve for many primes.
 
 Implement `char_frequencies(text)` and `is_anagram(left, right)`.
 
-Module: `string_analysis`
+Folder: `src/katastrof/katas/string_analysis/`
 
 Use `collections.Counter`, Python's standard multiset.
 
@@ -148,7 +148,7 @@ Use `collections.Counter`, Python's standard multiset.
 
 Implement `valid_parentheses(text)`.
 
-Module: `parentheses`
+Folder: `src/katastrof/katas/parentheses/`
 
 Use a list as a stack.
 
@@ -156,7 +156,7 @@ Use a list as a stack.
 
 Implement `binary_search(sorted_items, target)`.
 
-Module: `binary_search`
+Folder: `src/katastrof/katas/binary_search/`
 
 The key invariant is that the answer, if present, remains inside `[low, high]`.
 
@@ -165,7 +165,7 @@ The key invariant is that the answer, if present, remains inside `[low, high]`.
 Implement `TreeNode`, `tree_height(node)`, `inorder_values(node)`, and
 `breadth_first_values(root)`.
 
-Module: `tree`
+Folder: `src/katastrof/katas/tree/`
 
 Depth-first traversal is naturally recursive; breadth-first traversal uses a queue.
 
@@ -173,6 +173,6 @@ Depth-first traversal is naturally recursive; breadth-first traversal uses a que
 
 Implement `two_sum(numbers, target)`.
 
-Module: `two_sum`
+Folder: `src/katastrof/katas/two_sum/`
 
 Use a set of previously seen values to find a complement in one pass.

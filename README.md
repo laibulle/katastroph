@@ -17,8 +17,20 @@ uv run pytest
 By default, tests run against the reference implementations in
 `src/katastrof/solutions/`.
 
-To practice, implement the matching module in `src/katastrof/katas/`, then run
-the same contract tests against your code:
+Each kata has its own folder:
+
+```text
+src/katastrof/katas/tail/
+  __init__.py      # your implementation
+  exercise.md      # clean exercise statement
+
+src/katastrof/solutions/tail/
+  __init__.py      # reference implementation
+  explanation.md   # explanation of the solution
+```
+
+To practice, implement the matching `__init__.py` in `src/katastrof/katas/`, then
+run the same contract tests against your code:
 
 ```bash
 KATA_PACKAGE=katastrof.katas uv run pytest tests/test_tail.py
@@ -31,10 +43,11 @@ implemented every module.
 ## How to Train
 
 1. Read one prompt in `docs/kata_catalog.md`.
-2. Implement the matching module in `src/katastrof/katas/`.
-3. Run the tests for fast feedback.
-4. Compare with the matching module in `src/katastrof/solutions/`.
-5. Explain out loud the complexity and tradeoffs.
+2. Open the kata folder and read `exercise.md`.
+3. Implement the matching `__init__.py` in `src/katastrof/katas/`.
+4. Run the tests for fast feedback.
+5. Compare with the matching solution folder, including `explanation.md`.
+6. Explain out loud the complexity and tradeoffs.
 
 ## Elixir to Python Pointers
 
