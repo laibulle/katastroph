@@ -16,7 +16,7 @@ This plan assumes the first interview is general algorithms, not AI.
 
 - [x] `string_analysis`
 - [x] `two_sum`
-- [ ] `parentheses`
+- [x] `parentheses`
 - [ ] `binary_search`
 - [ ] `recursion`
 - [ ] `fibonacci`
