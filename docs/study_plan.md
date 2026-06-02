@@ -14,7 +14,7 @@ This plan assumes the first interview is general algorithms, not AI.
 
 ## Week 1: Python Algorithm Basics
 
-- [ ] `string_analysis`
+- [x] `string_analysis`
 - [ ] `two_sum`
 - [ ] `parentheses`
 - [ ] `binary_search`
